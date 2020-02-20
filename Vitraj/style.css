@@ -1,0 +1,60 @@
+.stained-glass {
+  position: relative;
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.stained-glass_first {
+  --image: url(photo-1.jpeg)
+}
+
+.stained-glass_second {
+  --image: url(photo-2.jpeg)
+}
+
+.stained-glass__part {
+  position: absolute;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .9);
+  background-image: var(--image);
+  background-size: 900px 600px;
+  background-color: #ccc;
+}
+
+.stained-glass__part:hover {
+  transform: scale(1.1);
+}
+
+.stained-glass__part:nth-child(1) {
+  top: 150px;
+  z-index: 2;
+  width: 200px;
+  height: 300px;
+  background-position: 0 -150px;
+}
+
+.stained-glass__part:nth-child(2) {
+  top: 80px;
+  left: 100px;
+  z-index: 1;
+  width: 400px;
+  height: 450px;
+  background-position: -100px -80px;
+}
+
+.stained-glass__part:nth-child(3) {
+  left: 375px;
+  z-index: 3;
+  width: 400px;
+  height: 600px;
+  background-position: -375px 0;
+}
+
+.stained-glass__part:nth-child(4) {
+  top: 30px;
+  left: 500px;
+  z-index: 1;
+  width: 400px;
+  height: 500px;
+  background-position: -500px -30px;
+}
